@@ -4,7 +4,7 @@ class Api {
     this._headers = headers
 }
 
-
+//профиль
 getProfile() {
     return fetch(`${this._baseUrl}/users/me`, {
         headers: this._headers
@@ -13,7 +13,7 @@ getProfile() {
     )
     
 }
-
+// Загрузка карточек с сервера
 getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
         headers: this._headers

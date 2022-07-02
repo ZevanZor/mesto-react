@@ -11,14 +11,14 @@ function Main (props, userAvatar) {
     <section className="profile">
       <div className="profile__main">
         <button className="profile__button-avatar" type="button" onClick={props.onEditAvatar}>
-        <img src={Avatar} alt="Аватар" className="profile__avatar" style={{ backgroundImage: `url(${userAvatar})` }}/>
+        <img src={Avatar} alt="Аватар" className="profile__avatar" style={{ backgroundImage: `url(${userAvatar.avatar})` }}/>
       </button>
         <div className="profile__info">
           <h1 className="profile__title">{props.userName.name}</h1>
           <button className="profile__edit-button" type="button" onClick={props.onEditProfile}>
             <img src={ButtonProfile} alt="кнопка редактирования профиля" />
           </button>
-          <p class="profile__subtitle">{props.userDescription}</p>
+          <p class="profile__subtitle">{props.userDescription.about}</p>
         </div>
         
       </div>
