@@ -1,34 +1,37 @@
 import React from 'react';
-import Avatar from '../images/image.jpg';
+//import Avatar from '../images/image.jpg';
 import ButtonProfile from '../images/Vectori.svg';
 import ButtonCard from '../images/Vector+.svg';
+import Card from './Сard';
 
-
-function Main (props, userAvatar) {
- 
+function Main ({onEditAvatar, userAvatar,userName,onEditProfile,userDescription, onAddPlace, cards , onCardClick}) {
+  
   return (
     <main>
     <section className="profile">
       <div className="profile__main">
-        <button className="profile__button-avatar" type="button" onClick={props.onEditAvatar}>
-        <img src={Avatar} alt="Аватар" className="profile__avatar" style={{ backgroundImage: `url(${userAvatar.avatar})` }}/>
+        <button className="profile__button-avatar" type="button" onClick={onEditAvatar}>
+        <img src={userAvatar.avatar} alt="Аватар" className="profile__avatar"/>
       </button>
         <div className="profile__info">
-          <h1 className="profile__title">{props.userName.name}</h1>
-          <button className="profile__edit-button" type="button" onClick={props.onEditProfile}>
+          <h1 className="profile__title">{userName.name}</h1>
+          <button className="profile__edit-button" type="button" onClick={onEditProfile}>
             <img src={ButtonProfile} alt="кнопка редактирования профиля" />
           </button>
-          <p class="profile__subtitle">{props.userDescription.about}</p>
+          <p className="profile__subtitle">{userDescription.about}</p>
         </div>
         
       </div>
-      <button className="profile__add-button" type="button" onClick={props.onAddPlace}>
+      <button className="profile__add-button" type="button" onClick={onAddPlace}>
         <img src={ButtonCard} alt="кнопка добавления контента" />
       </button>
     </section>
-    <section className="elements">
-      
-    </section>
+    <ul className="elements">
+    {cards.map((item) =>(
+     <Card card={item} onCardClick={onCardClick} key={item._id}/>
+    ))
+  }
+    </ul>
   </main>
 
     
