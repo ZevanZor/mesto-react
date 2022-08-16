@@ -19,7 +19,7 @@ Mesto - интерактивная страница создан для трен
 
 ### GitHub Pages
 
-(https://zevanzor.github.io/mesto/)
+(https://zevanzor.github.io/mesto-react/)
 
 
 # Getting Started with Create React App
