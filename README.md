@@ -1,3 +1,27 @@
+# Проект: Место
+
+### Описание проекта
+
+Mesto - интерактивная страница создан для тренировки навыков вёрстки и применения JavaScript.
+
+### Технологии
+
+* Flexbox
+* Grid Layout
+* Figma
+* Git
+* Верстка по БЭМ
+* DOM
+* JavaScript
+* Api
+* React
+* Webpack
+
+### GitHub Pages
+
+(https://zevanzor.github.io/mesto/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
