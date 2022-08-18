@@ -12,16 +12,22 @@ function App() {
   const [cards, setСards] = React.useState([]);
 
   useEffect((data) => {
-    api.getProfile(data).then((res) => {
-      setCurrentUser(res);
-    });
+    api
+      .getProfile(data)
+      .then((res) => {
+        setCurrentUser(res);
+      })
+      .catch((res) => console.log(res));
   }, []);
 
   useEffect(() => {
-    api.getInitialCards().then((res) => {
-      setСards(res);
-    });
-  });
+    api
+      .getInitialCards()
+      .then((res) => {
+        setСards(res);
+      })
+      .catch((res) => console.log(res));
+  }, []);
 
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
     React.useState(false);
